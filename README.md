@@ -1,136 +1,412 @@
-# g221210572-hassan
-g221210572 hassan şevvak  
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <title>Hassan Şevvak</title>
-</head>
-<body>
-    <header class="header" >
-        <div id="menubar" class="fa-solid fa-bars"></div>
-        <a href="index.html"class="logo">Hassan
-            <span>syr</span>
-        </a>
-        <nav class=navc>
-            <a href="#" >Home</a>
-            <a href="#" >CV</a>
-            <a href="#" >MyCity</a>
-            <a href="#" >Interests</a>
-            <a href="#" >Communication</a>
+@import url('https://fonts.googleapis.com/css2?family=Cairo&family=Poppins:ital,wght@0,400;0,500;0,600;1,500&display=swap');
 
-        </nav>
-        <div id="login-btn">
-                <button type="button" class="bz">login</button>
-                <i class="fa-solid fa-user"></i>
-            </div>
-    </header>
-    <section class="main">
-        <div>
-            <h2> hello Im hasan
-                <br> 
-                    <span>computer engineer </span>
-            </h2>
-            <h3>web dev</h3>
-            <a href="#asd" class="btn">Show more information about me</a>
-            <div class="soc">
-                <a href="https://instagram.com/hassan__sy3?igshid=ZGUzMzM3NWJiOQ=="><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://github.com/7hassan-sy"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.tiktok.com/@hassan_syr3?_t=8c7rLAVwTf4&_r=1"><i class="fa-brands fa-tiktok"></i></a>
-                <a href="https://youtube.com/@hassansyr5060"><i class="fa-brands fa-youtube"></i></a>
-            </div>
-        </div>
-    </section>
-    <section class="first-section" id="asd">
-        <div class="row">
-            <div class="col-lg-3 col-12">
-                <img src="WhatsApp Görsel 2023-05-07 saat 22.22.21.jpg" alt="hassan">
-            </div>
-            <div class="col-lg-3 coll-11">
-                <h1>Hassan Shawakh</h1>
-                <p class="ha">
-                    hello,  I am Hassan Shawakh, a Syrian national, I was born in the city  <br>of Aleppo on 10.08.2003. I have been living in Turkey for 8 years.
-                    <br>Now I am studying  at Sakarya University in the Faculty of  Computer Engineering.
-                </p>
-            </div>
-        </div>
-    </section>
-    <section class="cd">
-        <h2 class="title">My hobbies </h2>
-        <div class="ct">
-            <div class="card">
-                <a href="https://en.wikipedia.org/wiki/Football" class="lik">
-                <div class="imgf">
-                    <img src="124-224927-messi-world-cup-2022-celebrations_700x400.jpg" alt="footbal" >
-                </div>
-                <div class="in">
-                    <h3>Football</h3>
-                    <p>
-                        Football, also known as soccer in some countries, can mean different things to different people. However, generally speaking, football is more than just a sport to many people; it can be a way of life and a source of identity and pride.
-                        For some, football is a way of escaping the stresses of everyday life and immersing oneself in the excitement and passion of the game. It can be a way of connecting with others who share a love of the sport, and of building social bonds and communities.
-                        For others, football is a source of national pride and identity. It can bring together people from different regions, cultures, and backgrounds, and create a sense of unity and shared purpose. Football can also serve as a way of promoting a positive image of a country to the rest of the world, and of showcasing the talents and skills of its players.
-                        Furthermore, football can be a symbol of perseverance, determination, and hard work. It requires discipline, training, and teamwork, and can be a powerful tool for personal and societal growth. It can inspire people to overcome obstacles and strive for excellence, both on and off the field.In summary, football can mean a lot of different things to different people, but it often goes beyond just a sport and can encompass social, cultural, and personal values and ideals.
-                    </p>
-                </div>
-            </a>
-            </div>
-            <div class="card">
-                <a href="https://en.wikipedia.org/wiki/Chess" class="lik">
-                <div class="imgf">
-                    <img src="thumb2-4k-chess-knight-horses-chess-pieces-knight-chess.jpg" alt="footbal">
-                </div>
-                <div class="in">
-                    <h3>Chess</h3>
-                    <p>
-                        Chess is a game that has been played for centuries and remains popular today. It is a game of strategy, skill, and patience that requires players to think ahead and make calculated moves. The game is played on a board with 64 squares and 32 pieces, with each player controlling 16 pieces.
-                        At the start of the game, each player moves their pieces according to a set of rules. The goal is to capture the opponent's pieces and ultimately their king. The game can be won by checkmate, which is a position where the opponent's king is under attack and cannot escape capture.
-                        Chess is a game that requires mental acuity and concentration. It has been shown to improve cognitive abilities, memory, and critical thinking skills. The game can also teach important life lessons such as patience, perseverance, and sportsmanship. It requires players to think creatively and develop their own unique playing style.
-                        One of the unique aspects of chess is its universality. The game can be played by people of all ages, genders, and cultural backgrounds. It is a game that transcends language barriers and can bring people together.
-                        In addition to being a popular game, chess has also been used as a tool for education and social change. It has been introduced in schools as a way to improve academic performance and develop critical thinking skills. Chess has also been used as a tool for social change, promoting peace and understanding between cultures.
-                        In conclusion, chess is a game that offers a challenging and rewarding experience. It requires mental acuity, patience, and concentration, and can teach important life lessons. The universality of the game makes it a powerful tool for education and social change, and its popularity continues to endure.
-                    </p>
-                </div>
-            </div>
-            </a>
-            <div class="card">
-                <a href="https://en.wikipedia.org/wiki/Reading" class="lik">
-                <div class="imgf">
-                    <img src="613e1a5083d0f.jpg" alt="footbal">
-                </div>
-                <div class="in">
-                    <h3>Reading books</h3>
-                    <p>
-                        Reading books is a common hobby enjoyed by people of all ages around the world. It is an activity that offers numerous benefits, including entertainment, education, and personal growth. Moreover, the act of reading books can contribute to an individual's identity in several ways.
-                        Firstly, reading books can help shape a person's worldview. Exposure to a diverse range of literary works can broaden one's perspective and increase empathy and understanding towards others. Reading books on different topics can also expand knowledge and create new interests, contributing to personal growth and development.
-                        Secondly, the books a person reads can reflect their identity. The genres, authors, and themes that one chooses to read can reveal personal preferences, values, and beliefs. Additionally, reading books can be a form of self-expression and an opportunity for people to explore their own thoughts and emotions.
-                        Thirdly, reading books can be a way for individuals to connect with others and build a sense of community. Joining book clubs, attending author talks, and discussing books with others can create opportunities for social engagement and networking.
-                        Lastly, reading books can be a form of escapism. Engaging in a captivating novel can transport individuals to different worlds and offer temporary relief from stress and anxiety. It can also serve as a way to disconnect from technology and the outside world, allowing for a moment of relaxation and introspection.
-                        In conclusion, reading books is an activity that can contribute to an individual's identity in various ways. It can broaden one's worldview, reflect personal preferences and beliefs, foster community engagement, and serve as a form of escapism. As such, it is a hobby that continues to endure and offer numerous benefits to those who partake in it.
-                    </p>
-                </div>
-            </div>
-            </a>
-        </div>
-        
-    </section>
-    <footer class="foo">
-    <p class="foo-title">Hassan  <span> Shawakh</span></p>
-    <div class="soc">
-        <a href="https://instagram.com/hassan__sy3?igshid=ZGUzMzM3NWJiOQ=="><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://github.com/7hassan-sy"><i class="fa-brands fa-github"></i></a>
-        <a href="https://www.tiktok.com/@hassan_syr3?_t=8c7rLAVwTf4&_r=1"><i class="fa-brands fa-tiktok"></i></a>
-        <a href="https://youtube.com/@hassansyr5060"><i class="fa-brands fa-youtube"></i></a>
-    </div>
-    <a href="index.html">
-    <i class="fa-solid fa-arrow-up" ></i>
-    </a>
-    </footer>
-    <script src="main.js"></script>
-</body>
-</html>
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+:root{
+   --border: .1rem solid rgba(18, 75, 180, 0.568);
+}
+.bz{
+    display:inline-block;
+    margin-top: 1rem;
+    border-radius: .5rem;
+    background-color:#1b92d1 ;
+    padding: .8rem 3rem;
+    font-size: 1.7rem;
+    font-weight: 500;
+    cursor: pointer;
+    border-color: #1b92d1;
+}
 
+.bz:hover{
+    color: #c8d9ea;
+    transform: scale(1.1);
+    font-weight: 700;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 140px;
+}
+.header{
+    background-color: #1b92d1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 9%;
+}
+
+.header .logo{
+    color: black;
+    font-weight: bolder;
+    font-size: 28px;
+}
+
+.header .logo span{
+    color: #ecf5fb;
+    font-size: 20px;
+    
+}
+
+.header .navc a{
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 1rem;
+}
+
+.header .navc a:hover{
+    color: #c8d9ea;
+    transform: scale(1.1);
+
+}
+
+.header #login-btn i{
+    display: none;
+    cursor: pointer;
+    font-size: 2.5rem;
+    color: #c8d9ea;
+}
+.header.active{
+    box-shadow: 0 0.5rem 1rem rgba(18, 75, 180, 0.568);
+    padding: 2rem 9%;
+}
+#menubar{
+    display: none;  
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+body{
+    background-color: #c8d9ea;
+}
+
+section{
+    padding: 100px 200px;
+
+}
+
+.main{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(pngtree-electronic-technology-website-texture-background-banner-image_156039.jpg)  no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    background-attachment: fixed;
+}
+
+.main h2{
+    font-size:23px ;
+    font-weight: 500;
+}
+
+.main h2 span{
+    display: inline-block;
+    color: #c8d9ea;
+    font-size: 48px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.main h3{
+    font-size:31px ;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.btn{
+    color: #c8d9ea;
+    background-color:#1b92d1 ;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    display: inline-block;
+    padding: 15px 35px ;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    transition: 0.7s ease;
+}
+
+.btn:hover{
+    background-color: #37afe2;
+    transform: scale(1.1);
+}
+
+.soc a{
+    color: black;
+    font-size: 28px;
+    padding-right: 30px;
+}
+section .first-section{
+    margin: 15px;
+}
+.first-section .col-lg-3.col-12 img{
+    height: 320px;
+    width: 319px;
+    border: 5px solid #1b92d1;
+    border-radius: 240px;
+    padding: 5px;
+    background-color: white;
+    margin: 1%;
+    position: relative;
+    left: -85px;
+    transition: 0.7s ease;
+
+}
+
+img {
+    vertical-align: middle;
+}
+
+.first-section h1{
+    font-size: 32px;
+    width:55%;
+    z-index: 5;
+    position: relative;
+    top:-312px;
+    left: 200px;
+    text-align: center;
+    color:black;
+}
+h1{
+    margin-bottom: 8px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: 8px;
+    display: block;
+    margin-inline-end: 0px;
+    margin-block-start: 0px;
+}
+
+.first-section p{
+    border: 5px solid #1b92d1;
+    padding: 15px;
+    font-size: 34px;
+    border-radius: 50px;
+    position: relative;
+    top: -330px;
+    left: 230px;
+}
+
+
+p{
+    margin-top: 0;
+    margin-bottom: 20px;
+    margin: 0;
+    font-weight: 800px;
+    text-align: left;
+    text-align: justify;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 1em;
+    margin-inline-end: 1em;
+}
+
+.first-section .col-lg-3.col-12 img:hover{
+    width: 22%;
+    height: 350px;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    color:#1b92d1;
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 50px;
+    position: relative;
+    top: -415px;
+}
+
+.ct{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    top: -395px;
+}
+
+.card{
+    background-color: #37afe2;
+    width: 440px;
+    box-shadow: 0 5px 25px rgba(18, 75, 180, 0.568);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 20px ;
+    transition: 0.7s ease;
+}
+
+.card:hover{
+    transform: scale(1.1);
+}
+
+.imgf img{
+    display:inline-block;
+    width: 400px;
+    height: 180px;
+}
+
+.in{
+    text-align: center;
+}
+
+.in h3{
+    color: black;
+    font-size: 20px;
+    font-weight: 10px;
+    margin: 10px;
+}
+
+.lik{
+    text-decoration: none;
+    color: black;
+}
+
+.foo{
+    background-color: #1b92d1;
+    padding: 32px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.foo-title{
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.foo-title span{
+    color: #ecf5fb;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.fa-solid.fa-arrow-up{
+    color: black;
+    padding: 30px;
+}
+
+@media(max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    .header{
+        padding: 2rem;
+    }
+    .main h2{
+        position: relative;
+        top: 32px;
+        left: -73px;
+        font-weight: 600;
+    }
+    .main h2 span{
+        font-size: 27px;
+    }
+    .main h3{
+        font-size: 29px;
+        position: relative;
+        top: 34px;
+        left: -73px;
+        font-weight: 600;
+    }
+    .btn{
+        position: relative;
+        top: 25px;
+        left: -73px;
+        font-weight: 900;
+        font-size: 15px;
+    }
+    .soc a{
+        position: relative;
+        left: -60px;
+        top: 5px;
+    }
+}
+
+@media(max-width:768px){
+    .header #login-btn i{
+        display: block;
+    }
+    .header #login-btn .bz{
+        display: none;
+    }
+    .header .navc{
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        background:#1b92d1;
+        border-top: var(--border);
+        clip-path: polygon( 0 0 , 100% 0, 100% 0 , 0 0);
+        }
+    .header .navc.active{
+        clip-path: polygon(0 0 , 100% 0 , 100% 100% , 0 100%);
+    }    
+    .header .navc a{
+        display: block;
+        margin: 2rem;
+        font-size: 2rem;
+    }  
+    #menubar{
+        display: block;
+    }  
+    #menubar .fa-bars{
+        transform: rotate(180deg);
+    }
+    .header.active{
+        padding: 2rem;  
+    }
+    .main h2{
+        position: relative;
+        top: 88px;
+        left: -149px;
+        font-weight: 600;
+    }
+    .main h2 span{
+        font-size: 15px;
+    }
+    .main h3{
+        font-size: 25px;
+        position: relative;
+        top: 87px;
+        left: -149px;
+        font-weight: 600;
+    }
+    .btn{
+        position: relative;
+        top: 70px;
+        left: -149px;
+        font-weight: 900;
+        font-size: 11px;
+    }
+    .soc a{
+        position: relative;
+        left: -133px;
+        top: 50px;
+    }
+}
+@media(min-width:0px) and (max-width:705){
+    html{
+        font-size: 55%;
+    }
+}
