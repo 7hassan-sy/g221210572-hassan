@@ -1,207 +1,68 @@
-@import url('https://fonts.googleapis.com/css2?family=Cairo&family=Poppins:ital,wght@0,400;0,500;0,600;1,500&display=swap');
+const carousel = document.querySelector(".carousel"),
+firstImg = carousel.querySelectorAll("img")[0],
+arrowIcons = document.querySelectorAll(".wrapper i");
 
-*{
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    outline: none;
-    text-decoration: none;
-    text-transform: capitalize;
-    transition: all .2s linear;
-}
-:root{
-   --border: .1rem solid rgba(18, 75, 180, 0.568);
-}
-.bz{
-    display:inline-block;
-    margin-top: 1rem;
-    border-radius: .5rem;
-    background-color:#1b92d1 ;
-    padding: .8rem 3rem;
-    font-size: 1.7rem;
-    font-weight: 500;
-    cursor: pointer;
-    border-color: #1b92d1;
+let isDragStart = false, isDragging = false, prevPageX, prevScrollLeft, positionDiff;
+
+const showHideIcons = () => {
+
+    let scrollWidth = carousel.scrollWidth - carousel.clientWidth; 
+    arrowIcons[0].style.display = carousel.scrollLeft == 0 ? "none" : "block";
+    arrowIcons[1].style.display = carousel.scrollLeft == scrollWidth ? "none" : "block";
 }
 
-.bz:hover{
-    color: #c8d9ea;
-    transform: scale(1.1);
-    font-weight: 700;
-}
-html{
-    font-size: 62.5%;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-    scroll-padding-top: 140px;
-}
-.header{
-    background-color: #1b92d1;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 999;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem 9%;
-}
+arrowIcons.forEach(icon => {
+    icon.addEventListener("click", () => {
+        let firstImgWidth = firstImg.clientWidth + 14; 
+        carousel.scrollLeft += icon.id == "left" ? -firstImgWidth : firstImgWidth;
+        setTimeout(() => showHideIcons(), 60); 
+    });
+});
 
-.header .logo{
-    color: black;
-    font-weight: bolder;
-    font-size: 28px;
-}
+const autoSlide = () => {
 
-.header .logo span{
-    color: #ecf5fb;
-    font-size: 20px;
-    
-}
+    if(carousel.scrollLeft - (carousel.scrollWidth - carousel.clientWidth) > -1 || carousel.scrollLeft <= 0) return;
 
-.header .navc a{
-    color: black;
-    font-size: 18px;
-    font-weight: 600;
-    margin: 0 1rem;
-}
+    positionDiff = Math.abs(positionDiff); 
+    let firstImgWidth = firstImg.clientWidth + 14;
+    let valDifference = firstImgWidth - positionDiff;
 
-.header .navc a:hover{
-    color: #c8d9ea;
-    transform: scale(1.1);
-
-}
-
-.header #login-btn i{
-    display: none;
-    cursor: pointer;
-    font-size: 2.5rem;
-    color: #c8d9ea;
-}
-.header.active{
-    box-shadow: 0 0.5rem 1rem rgba(18, 75, 180, 0.568);
-    padding: 2rem 9%;
-}
-#menubar{
-    display: none;  
-    font-size: 2.5rem;
-    cursor: pointer;
-}
-
-body{
-    background-color: #c8d9ea;
-}
-
-
-
-.titleh{
-    display: flex;
-    justify-content: center;
-    color:#1b92d1;
-    font-size: 36px;
-    font-weight: 800;
-    margin-bottom: 50px;
-    position: relative;
-    top: -415px;
-}
-
-.cth{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    position: relative;
-    top: -395px;
-}
-
-.cardh{
-    background-color:#c8d9ea;
-    width: 40em;
-    box-shadow: 0 5px 25px rgba(18, 75, 180, 0.568);
-    border-radius: 10px;
-    padding: 25px;
-    margin: 20px ;
-    transition: 0.7s ease;
-}
-
-.cardh:hover{
-    transform: scale(1.1);
-}
-
-.imgfh img{
-    display:inline-block;
-    width: 400px;
-    height: 180px;
-}
-
-.inh{
-    text-align: center;
-}
-
-.inh h3{
-    color: black;
-    font-size: 20px;
-    font-weight: 10px;
-    margin: 10px;
-}
-
-.lik{
-    text-decoration: none;
-    color: black;
-}
-
-.as{
-    color: #1b92d1;
-}
-
-
-@media(max-width:991px){
-    html{
-        font-size: 55%;
+    if(carousel.scrollLeft > prevScrollLeft) {
+        return carousel.scrollLeft += positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
     }
-    .header{
-        padding: 2rem;
-    }
+    carousel.scrollLeft -= positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
 }
 
-@media(max-width:768px){
-    .header #login-btn i{
-        display: block;
-    }
-    .header #login-btn .bz{
-        display: none;
-    }
-    .header .navc{
-        position: absolute;
-        top: 99%;
-        left: 0;
-        right: 0;
-        background:#1b92d1;
-        border-top: var(--border);
-        clip-path: polygon( 0 0 , 100% 0, 100% 0 , 0 0);
-        }
-    .header .navc.active{
-        clip-path: polygon(0 0 , 100% 0 , 100% 100% , 0 100%);
-    }    
-    .header .navc a{
-        display: block;
-        margin: 2rem;
-        font-size: 2rem;
-    }  
-    #menubar{
-        display: block;
-    }  
-    #menubar .fa-bars{
-        transform: rotate(180deg);
-    }
-    .header.active{
-        padding: 2rem;  
-    }
+const dragStart = (e) => {
+    isDragStart = true;
+    prevPageX = e.pageX || e.touches[0].pageX;
+    prevScrollLeft = carousel.scrollLeft;
 }
-@media(min-width:0px) and (max-width:705){
-    html{
-        font-size: 55%;
-    }
+
+const dragging = (e) => {
+    if(!isDragStart) return;
+    e.preventDefault();
+    isDragging = true;
+    carousel.classList.add("dragging");
+    positionDiff = (e.pageX || e.touches[0].pageX) - prevPageX;
+    carousel.scrollLeft = prevScrollLeft - positionDiff;
+    showHideIcons();
 }
+
+const dragStop = () => {
+    isDragStart = false;
+    carousel.classList.remove("dragging");
+
+    if(!isDragging) return;
+    isDragging = false;
+    autoSlide();
+}
+
+carousel.addEventListener("mousedown", dragStart);
+carousel.addEventListener("touchstart", dragStart);
+
+document.addEventListener("mousemove", dragging);
+carousel.addEventListener("touchmove", dragging);
+
+document.addEventListener("mouseup", dragStop);
+carousel.addEventListener("touchend", dragStop);
