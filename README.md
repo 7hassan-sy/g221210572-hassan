@@ -1,68 +1,109 @@
-const carousel = document.querySelector(".carousel"),
-firstImg = carousel.querySelectorAll("img")[0],
-arrowIcons = document.querySelectorAll(".wrapper i");
-
-let isDragStart = false, isDragging = false, prevPageX, prevScrollLeft, positionDiff;
-
-const showHideIcons = () => {
-
-    let scrollWidth = carousel.scrollWidth - carousel.clientWidth; 
-    arrowIcons[0].style.display = carousel.scrollLeft == 0 ? "none" : "block";
-    arrowIcons[1].style.display = carousel.scrollLeft == scrollWidth ? "none" : "block";
+    <section class="loginfrm"> 
+        <span class="fa-solid fa-xmark" id="close-login-btn"></span>
+        <form action="">
+            <h3>login </h3>
+            <input type="email" placeholder="email" class="box">
+            <input type="password" placeholder="password" class="box">
+            <input type="submit" value="login now" class="bz" >
+            <p>or login with</p>
+            <div class="btns">
+                <a href="#" class="bz">google</a>
+                <a href="#" class="bz">facebook</a>
+            </div>
+        </form>
+    </section>
+    
+    
+    
+    .loginfrm{
+    position: fixed;
+    top: -150%;
+    left: 0;
+    z-index: 1000;
+    height: 100%;
+    width: 100%;
+    background: #c8d9ea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+.loginfrm.active{
+    top:0;
+    opacity: 1;
+}
+.loginfrm form{
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 5px 25px rgba(18, 75, 180, 0.568);
+    background: #c8d9ea;
+    border: var(--border);
+    text-align: center;
+    width: 40rem;
 }
 
-arrowIcons.forEach(icon => {
-    icon.addEventListener("click", () => {
-        let firstImgWidth = firstImg.clientWidth + 14; 
-        carousel.scrollLeft += icon.id == "left" ? -firstImgWidth : firstImgWidth;
-        setTimeout(() => showHideIcons(), 60); 
-    });
-});
-
-const autoSlide = () => {
-
-    if(carousel.scrollLeft - (carousel.scrollWidth - carousel.clientWidth) > -1 || carousel.scrollLeft <= 0) return;
-
-    positionDiff = Math.abs(positionDiff); 
-    let firstImgWidth = firstImg.clientWidth + 14;
-    let valDifference = firstImgWidth - positionDiff;
-
-    if(carousel.scrollLeft > prevScrollLeft) {
-        return carousel.scrollLeft += positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
-    }
-    carousel.scrollLeft -= positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
+.loginfrm form .btns{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
-const dragStart = (e) => {
-    isDragStart = true;
-    prevPageX = e.pageX || e.touches[0].pageX;
-    prevScrollLeft = carousel.scrollLeft;
+.loginfrm form .btn{
+    display: block;
+    width: 100%;
+    margin: .5rem 0;
 }
 
-const dragging = (e) => {
-    if(!isDragStart) return;
-    e.preventDefault();
-    isDragging = true;
-    carousel.classList.add("dragging");
-    positionDiff = (e.pageX || e.touches[0].pageX) - prevPageX;
-    carousel.scrollLeft = prevScrollLeft - positionDiff;
-    showHideIcons();
+.loginfrm form h3{
+    color: #37afe2;
+    font-size: 2.5rem;
+    padding-bottom: 1rem;
+    text-transform: uppercase;
 }
 
-const dragStop = () => {
-    isDragStart = false;
-    carousel.classList.remove("dragging");
-
-    if(!isDragging) return;
-    isDragging = false;
-    autoSlide();
+.loginfrm form .box{
+    margin: .7rem 0;
+    width: 100%;
+    text-transform: none;
+    color:black;
+    font-size: 1.5rem;
+    padding: 1rem 1.2rem;
+    border: var(--border);
+    border-radius: 0.5rem;
 }
 
-carousel.addEventListener("mousedown", dragStart);
-carousel.addEventListener("touchstart", dragStart);
+.loginfrm form p{
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    color: black;
+}
 
-document.addEventListener("mousemove", dragging);
-carousel.addEventListener("touchmove", dragging);
+.loginfrm form p a{
+    color: #37afe2;
+    text-decoration: underline;
+}
 
-document.addEventListener("mouseup", dragStop);
-carousel.addEventListener("touchend", dragStop);
+.loginfrm #close-login-btn{
+    position: absolute;
+    top: 1.5rem;
+    right: 2.5rem;
+    font-size: 5rem;
+    color: black;
+    cursor: pointer;
+}
+.btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btns .bz{
+    color: black;
+}
+    
+    
+    
+    
+    
+    
+    
