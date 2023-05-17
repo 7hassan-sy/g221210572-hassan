@@ -1,109 +1,23 @@
-    <section class="loginfrm"> 
-        <span class="fa-solid fa-xmark" id="close-login-btn"></span>
-        <form action="">
-            <h3>login </h3>
-            <input type="email" placeholder="email" class="box">
-            <input type="password" placeholder="password" class="box">
-            <input type="submit" value="login now" class="bz" >
-            <p>or login with</p>
-            <div class="btns">
-                <a href="#" class="bz">google</a>
-                <a href="#" class="bz">facebook</a>
-            </div>
-        </form>
-    </section>
-    
-    
-    
-    .loginfrm{
-    position: fixed;
-    top: -150%;
-    left: 0;
-    z-index: 1000;
-    height: 100%;
-    width: 100%;
-    background: #c8d9ea;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-}
-.loginfrm.active{
-    top:0;
-    opacity: 1;
-}
-.loginfrm form{
-    padding: 2rem;
-    margin: 2rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 5px 25px rgba(18, 75, 180, 0.568);
-    background: #c8d9ea;
-    border: var(--border);
-    text-align: center;
-    width: 40rem;
-}
+fetch("https://api.currencyfreaks.com/v2.0/rates/latest?apikey=b237e9555d97410fb63da99fe7306f32")
+.then((response) => response.json())
+.then((currency) => {
+    let myForm = document.querySelector("#myForm");
+    let eurPrice = document.querySelector(".eur span");
+    let egpPrice = document.querySelector(".egp span");
+    let sarPrice = document.querySelector(".sar span");
+    let sypPrice = document.querySelector(".syp span");
+    let tryPrice = document.querySelector(".try span");
+    let btcPrice = document.querySelector(".btc span");
 
-.loginfrm form .btns{
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.loginfrm form .btn{
-    display: block;
-    width: 100%;
-    margin: .5rem 0;
-}
-
-.loginfrm form h3{
-    color: #37afe2;
-    font-size: 2.5rem;
-    padding-bottom: 1rem;
-    text-transform: uppercase;
-}
-
-.loginfrm form .box{
-    margin: .7rem 0;
-    width: 100%;
-    text-transform: none;
-    color:black;
-    font-size: 1.5rem;
-    padding: 1rem 1.2rem;
-    border: var(--border);
-    border-radius: 0.5rem;
-}
-
-.loginfrm form p{
-    padding: 1rem 0;
-    font-size: 1.5rem;
-    color: black;
-}
-
-.loginfrm form p a{
-    color: #37afe2;
-    text-decoration: underline;
-}
-
-.loginfrm #close-login-btn{
-    position: absolute;
-    top: 1.5rem;
-    right: 2.5rem;
-    font-size: 5rem;
-    color: black;
-    cursor: pointer;
-}
-.btns{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.btns .bz{
-    color: black;
-}
-    
-    
-    
-    
-    
-    
-    
+    myForm.addEventListener("submit", function(event) {
+        event.preventDefault(); 
+        
+        let amount = document.querySelector(".amount").value;
+        eurPrice.innerHTML =(amount * currency.rates["EUR"]);
+        egpPrice.innerHTML =(amount * currency.rates["EGP"]);
+        sarPrice.innerHTML =(amount * currency.rates["SAR"]);
+        sypPrice.innerHTML =(amount * currency.rates["SYP"]);
+        tryPrice.innerHTML =(amount * currency.rates["TRY"]);
+        btcPrice.innerHTML =(amount * currency.rates["BTC"]);
+    });
+});
